@@ -1,7 +1,7 @@
 # Read the Docs - Build container images
 
 DOCKER ?= $(shell which docker)
-IMAGES = zuul gerrit jenkins
+IMAGES = zuul gerrit jenkins gitlab-ce
 
 .PHONY: images $(IMAGES) push
 
@@ -21,4 +21,7 @@ gerrit: gerrit/Dockerfile
 jenkins: jenkins/Dockerfile
 	docker build -t allanice001/zuul-stack:jenkins gerrit/
 
-all: zuul jenkins gerrit
+gitlab-ce: gitlab-ce/Dockerfile
+	docker build -t allanice001/zuulstack:gitlab-ce gitlab-ce/
+
+all: zuul jenkins gerrit gitlab-ce
