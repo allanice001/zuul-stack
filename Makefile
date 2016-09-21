@@ -11,6 +11,7 @@ push:
 	docker push allanice001/zuul-stack:zuul
 	docker push allanice001/zuul-stack:gerrit
 	docker push allanice001/zuul-stack:jenkins
+	docker push allanice001/zuul-stack:gitlab-ce
 
 zuul: zuul/Dockerfile
 	docker build -t allanice001/zuul-stack:zuul zuul/
