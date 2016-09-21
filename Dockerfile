@@ -14,11 +14,12 @@ RUN sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sourc
 
 RUN apt-get -y update
 RUN apt-get -y install vim software-properties-common python-setuptools \
-  python3-setuptools git jenkins python-pip python-dev 
+  python3-setuptools git jenkins python-pip python-dev
 # RUN apt-get -y install gearman-job-server libgearman-dev php-pear php5-dev
 # RUN pecl install gearman
 
 RUN git clone https://github.com/openstack-infra/zuul.git /opt/zuul
+RUN pip install pytz
 RUN pip install /opt/zuul
 
 CMD ["/bin/bash"]
