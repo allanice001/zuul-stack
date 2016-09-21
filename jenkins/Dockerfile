@@ -22,4 +22,5 @@ RUN git clone https://github.com/openstack-infra/zuul.git /opt/zuul
 RUN pip install pytz
 RUN pip install /opt/zuul
 
+EXPOSE 8080
 CMD ["/bin/bash"]
