@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:vivid-20160122@sha256:87dd5c73a618fcddbb74b8f22a3afde94c2ee508e1f20c57b25f80d217345eb6
 MAINTAINER GerritForge
 # Add Gerrit packages repository
 RUN echo "deb mirror://mirrorlist.gerritforge.com/deb gerrit contrib" > /etc/apt/sources.list.d/GerritForge.list
